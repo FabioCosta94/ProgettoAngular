@@ -1,15 +1,18 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DataService } from './../services/data.service';
-import { CovidData } from 'src/app/models/data.model';
-import { Router } from '@angular/router';
-import { DashboardComponent } from '../routes/dashboard/dashboard.component';
+import { orderBy } from 'lodash';
 
 @Pipe({
   name: 'searchCountry'
 })
 export class SearchCountryPipe implements PipeTransform {
 
-  transform(value: any): string {
-      return value;
-      }
-    }
+  transform(value: any[], order = '', column: string = ''): any[] {
+    if (!value || order === '' || !order) { return value; } // no array
+    if (value.length <= 1) { return value; } // array with only one item
+    if (!column || column === '') { 
+      if(order==='asc'){return value.sort()}
+      else{return value.sort().reverse();}
+    } // sort 1d array
+    return orderBy(value, [column], [order]);
+  }
+}
