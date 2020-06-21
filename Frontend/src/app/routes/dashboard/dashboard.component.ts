@@ -3,6 +3,9 @@ import { DataService } from './../../services/data.service';
 import { CovidData } from 'src/app/models/data.model';
 import { Router } from '@angular/router';
 import { SearchCountryPipe } from '../../pipes/search-country.pipe';
+import { faAd } from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +13,8 @@ import { SearchCountryPipe } from '../../pipes/search-country.pipe';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  faAd = faAd;
 
   constructor( private dataService: DataService, private router : Router) { }
 
