@@ -1,3 +1,17 @@
-.pointer{
+.pointer {
     cursor: pointer;
+}
+
+fa-icon {
+    color: rgb(0, 255, 42);
+    font-size: 50px;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+table {
+    color: whitesmoke;
+    background-color: rgba(rgba(255, 0, 0, 0), green, blue, alpha)
 }

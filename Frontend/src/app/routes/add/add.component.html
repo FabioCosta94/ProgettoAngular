@@ -1,18 +1,18 @@
 <div class="container p-5">
     <div class="row">
-        <button class="btn btn-primary mr-5" [routerLink]= "['../']">Back</button>
+        <button class="btn btn-primary mr-5" [routerLink]="['../']">Back</button>
         <h3 class="text-center">New Report</h3>
     </div>
-    
+
     <form class="pt-5" (ngSubmit)="onSubmit(form)" #form="ngForm">
         <div class="form-group">
-        <label for="country">Country</label>
-        <input type="text" class="form-control" id="country" required ngModel name="country">
+            <label for="country">Country</label>
+            <input type="text" class="form-control" id="country" required ngModel name="country">
         </div>
 
         <div class="form-group">
-        <label for="population">Population</label>
-        <input type="number" class="form-control" id="population" number required ngModel name="population">
+            <label for="population">Population</label>
+            <input type="number" class="form-control" id="population" number required ngModel name="population">
         </div>
 
         <div class="form-group">
@@ -48,7 +48,7 @@
                 <option *ngFor="let continent of continents"> {{continent}} </option>
             </select>
 
-        
+
         </div>
 
         <div class="form-group">
@@ -64,7 +64,7 @@
             <label for="date">Date</label>
             <input type="date" class="form-control" id="date" required ngModel name="date">
         </div>
-        
+
         <button type="submit" [disabled]="!form.valid" class="btn btn-success">Submit</button>
 
     </form>

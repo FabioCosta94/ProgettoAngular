@@ -23,7 +23,9 @@ export class AddComponent implements OnInit {
 
   onSubmit(form : NgForm){
     this.dataEntry = form.form.value;
-    console.log(this.dataEntry);
+    // this.dataEntry.fatalityRate = (this.dataEntry.deaths / this.dataEntry.population)* this.dataEntry.cases; 
+    // this.dataEntry.recoveryRate = (this.dataEntry.recoveries/ this.dataEntry.cases)* 100;
+    // console.log(this.dataEntry);
     
     this.dataService.addEntry(this.dataEntry).subscribe(response => {
       console.log(response);
