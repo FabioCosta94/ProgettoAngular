@@ -13,5 +13,10 @@ h1 {
 
 table {
     color: whitesmoke;
-    background-color: rgba(rgba(255, 0, 0, 0), green, blue, alpha)
+    /* background-color: rgba(rgba(255, 0, 0, 0), green, blue, alpha) */
+}
+
+.container.p-5 {
+    /* background-color: rgba(110, 35, 35, 0.445); */
+    background-color: rgba(148, 148, 148, 0.609);
 }
